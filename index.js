@@ -165,5 +165,5 @@ async function generatingPackageFile(framework, projectDir, projectName) {
 
     createPackageJson(projectName, projectDir, dependencies);
 };
-
+console.clear();
 createBackendStructure();

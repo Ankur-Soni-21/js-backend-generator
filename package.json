@@ -4,9 +4,11 @@
   "version": "1.1.1",
   "description": "A CLI tool to create a backend structure for backend applications in JS",
   "main": "index.js",
-  "bin": {
-    "js-backend-generator": "index.js"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ankur-Soni-21/js-backend-generator.git"
   },
+  "bin": "./index.js",
   "scripts": {
     "start": "node index.js"
   },
@@ -17,10 +19,5 @@
     "express": "^4.19.2",
     "inquirer": "^9.2.23",
     "ora": "^8.0.1"
-  },
-  "devDependencies": {},
-  "keywords": [],
-  "directories": {
-    "test": "test"
   }
 }
