@@ -9,13 +9,13 @@ This is a CLI tool to create a backend project structure with commonly used fold
 You can create a new project structure using `npx` without having to install the package globally:
 
 ```sh
-npx js-backend <project-name>
+npx js-backend-generator <project-name>
 ```
 
 For example:
 
 ```sh
-npx js-backend MyApiProject
+npx js-backend-generator MyApiProject
 ```
 
 ### Trying It Locally
@@ -86,7 +86,7 @@ The following directory structure is created:
 Running the script with the project name `MyApiProject` and selecting `Express` as the framework:
 
 ```sh
-npx js-backend MyApiProject
+npx js-backend-generator MyApiProject
 ```
 
 This will create a project structure with the following commands to start:
