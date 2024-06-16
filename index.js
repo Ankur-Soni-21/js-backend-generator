@@ -30,7 +30,8 @@ const files = [
     'src/config/.gitkeep',
     'src/utils/.gitkeep',
     'tests/.gitkeep',
-    '.gitignore',
+    '.env',
+    '.env.sample',
     'README.md',
 ];
 
@@ -144,6 +145,20 @@ async function createPackageJson(projectName, projectDir, dependencies) {
     }
 }
 
+async function createGitIgnore (projectDir)  {
+    const data = `node_modules  \n.env`;
+
+    const filePath = projectDir + "/.gitignore";
+    try {
+        fs.writeFileSync
+            (filePath, data);
+        console.log(`.gitignore created for project`);
+    }
+    catch (error) {
+        console.error("Error creating .gitignore:", error);
+    }
+}
+
 
 async function generatingPackageFile(framework, projectDir, projectName) {
 
@@ -164,6 +179,7 @@ async function generatingPackageFile(framework, projectDir, projectName) {
     }
 
     createPackageJson(projectName, projectDir, dependencies);
+    createGitIgnore(projectDir);
 };
 console.clear();
 createBackendStructure();
